@@ -5,8 +5,21 @@ const cockpit = (props) => {
     useEffect(() => {
         console.log('[Cockpit.js] useEffect');
         //http request...
-    })
+        setTimeout(() => {
+            alert('saved data to cloud!');
+        }, 1000);
+        return () => {
+            console.log('[Cockpit.js] cleanup work in useEffect');
+        }
+    }, []);
     
+    useEffect(() =>{
+        console.log('[Cockpit.js] 2nd useEffect');
+        return () => {
+            console.log('[Cockpit.js] 2nd cleanup work in useEffect');
+        }
+    })
+
     const assignedClasses = [];
     let btnClass = '';
     if (props.showPersons) {
