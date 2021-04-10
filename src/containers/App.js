@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import classes from './App.css';
-import Person from '../components/Persons/Person/Person';
 import Persons from '../components/Persons/Persons'
-import ErrorBoundary from '../components/ErrorBoundary/ErrorBoundary'
 import Cockpit from '../components/Cockpit/Cockpit'
 
 // const StyledButton = styled.button`
@@ -51,9 +49,9 @@ class App extends Component {
   //   })
   // }
 
-  componentWillMount() {
-    console.log('[App.js] componentWillMount');
-  }
+  // componentWillMount() {
+  //   console.log('[App.js] componentWillMount');
+  // }
 
   componentDidMount() {
     console.log('[App.js] componentDidMount');
