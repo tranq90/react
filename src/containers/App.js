@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import classes from './App.css';
-import Persons from '../components/Persons/Persons'
-import Cockpit from '../components/Cockpit/Cockpit'
+import Persons from '../components/Persons/Persons';
+import Cockpit from '../components/Cockpit/Cockpit';
+import WithClass from '../hoc/WithClass';
 
 // const StyledButton = styled.button`
 //   background-color: ${props => props.alt ? 'red' : 'green'};
@@ -113,7 +114,7 @@ class App extends Component {
     }
 
     return (
-      <div className={classes.App}>
+      <WithClass classes={classes.App}>
         <button
           onClick={() => {
             this.setState({ showCockpit: false })
@@ -124,11 +125,10 @@ class App extends Component {
             persons={this.state.persons}
             showPersons={this.state.showPersons}
             clicked={this.togglePersonsHandler}
-            personLength={this.state.persons.length}
           />
         ) : null}
         {persons}
-      </div>
+      </WithClass>
     );
   }
 }
