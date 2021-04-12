@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Aux from '../../../hoc/Auxiliary'
+import Aux from '../../../hoc/Auxiliary';
 import classes from './Person.css'
 // const StyledDiv = styled.div`
 //     width: 60%;
